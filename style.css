@@ -112,20 +112,17 @@ img {
 .logo {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
 }
 
-.logo:hover {
-    color: #fff;
-    background-color: var(--color-accent-dark);
+.header-tech-logo {
+    display: block;
+    height: 28px;
+    width: auto;
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover .header-tech-logo {
+    opacity: 0.7;
 }
 
 .nav-links {
@@ -175,7 +172,15 @@ img {
 }
 
 .hero-inner {
-    max-width: 760px;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+}
+
+.hero-content {
+    max-width: 640px;
 }
 
 .eyebrow {
@@ -192,8 +197,15 @@ img {
 
 .hero h1 {
     font-size: clamp(2.25rem, 5vw, 3.25rem);
-    margin-bottom: var(--space-sm);
     color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+.hero-illustration {
+    display: block;
+    flex-shrink: 0;
+    height: 240px;
+    width: auto;
 }
 
 .hero-lead {
@@ -512,7 +524,16 @@ img {
     }
 
     .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content {
         max-width: 100%;
+    }
+
+    .hero-illustration {
+        height: 180px;
     }
 }
 
@@ -657,6 +678,10 @@ img {
    Responsive — Small phones (≤480px)
    ========================================================================== */
 @media (max-width: 480px) {
+    .hero-illustration {
+        height: 130px;
+    }
+
     .hero-contacts {
         flex-direction: column;
         align-items: stretch;

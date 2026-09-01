@@ -16,13 +16,17 @@
 <body>
     <header class="site-header">
         <nav class="nav container">
-            <a class="logo" href="#hero" aria-label="Наверх страницы">РД</a>
-            <a href="#nav-open" id="nav-open" class="nav-toggle-btn nav-toggle-open" aria-label="Открыть меню навигации"><span></span></a>
-            <a href="#hero" class="nav-toggle-btn nav-toggle-close" aria-label="Закрыть меню навигации"><span></span></a>
+            <a class="logo" href="#hero" aria-label="Наверх страницы">
+                <img class="header-tech-logo" src="assets/flutter-logo.svg" alt="Flutter" width="112" height="28">
+            </a>
+            <a href="#nav-open" id="nav-open" class="nav-toggle-btn nav-toggle-open"
+                aria-label="Открыть меню навигации"><span></span></a>
+            <a href="#hero" class="nav-toggle-btn nav-toggle-close"
+                aria-label="Закрыть меню навигации"><span></span></a>
             <ul class="nav-links">
                 <li><a href="#about">Обо мне</a></li>
-                <li><a href="#skills">Технологии</a></li>
                 <li><a href="#experience">Опыт</a></li>
+                <li><a href="#skills">Технологии</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
@@ -31,16 +35,19 @@
     <main>
         <section id="hero" class="hero">
             <div class="container hero-inner">
-                <p class="eyebrow">Flutter / Dart разработчик</p>
-                <h1>Досанов Руслан</h1>
-                <p class="hero-lead">
-                    5 лет в мобильной разработке: полный цикл от архитектуры до релиза в сторах,
-                    сооснователь продукта с аудиторией 200k+ пользователей.
-                </p>
-                <div class="hero-contacts">
-                    <a class="btn btn-primary" href="mailto:dossanovruslan@gmail.com">Написать письмо</a>
-                    <a class="btn btn-secondary" href="tel:+77757777779">+7 (775) 777-77-79</a>
+                <div class="hero-content">
+                    <p class="eyebrow">Flutter / Dart разработчик</p>
+                    <h1>Досанов Руслан</h1>
+                    <p class="hero-lead">
+                        5 лет в мобильной разработке: полный цикл от архитектуры до релиза в сторах,
+                        сооснователь продукта с аудиторией 200k+ пользователей.
+                    </p>
+                    <div class="hero-contacts">
+                        <a class="btn btn-primary" href="mailto:dossanovruslan@gmail.com">Написать</a>
+                        <a class="btn btn-secondary" href="tel:+77757777779">+7 (775) 777-77-79</a>
+                    </div>
                 </div>
+                <img class="hero-illustration" src="assets/dart-dash.png" alt="Dart" width="240" height="246">
             </div>
         </section>
 
@@ -70,7 +77,123 @@
             </div>
         </section>
 
-        <section id="skills" class="section section-alt">
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Опыт работы</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Июль — август 2026 · Соло-проект</p>
+                            <h3 class="timeline-role"><a class="project-link"
+                                    href="https://play.google.com/store/apps/details?id=com.bilimge.qyzmet&amp;hl=ru"
+                                    target="_blank" rel="noopener noreferrer">Білімді қолдау</a></h3>
+                            <ul class="timeline-list">
+                                <li>Благотворительное приложение для сбора пожертвований на поддержку образования и
+                                    строительство мечетей-медресе.</li>
+                                <li>Разработал в одиночку — от архитектуры до релиза в Google Play.</li>
+                                <li>Интегрировал платёжную систему Tip Top Pay для приёма пожертвований.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Февраль — май 2026 · Соло-проект</p>
+                            <h3 class="timeline-role"><a class="project-link"
+                                    href="https://apps.apple.com/ru/app/tododay-planner-tracker/id6761600720"
+                                    target="_blank" rel="noopener noreferrer">TodoDay: Planner &amp; Tracker</a></h3>
+                            <ul class="timeline-list">
+                                <li>Планировщик задач с календарём, заметками, учётом финансов и напоминаниями.</li>
+                                <li>Разработал в одиночку — от архитектуры до релиза в App Store.</li>
+                                <li>Настроил авторизацию через Firebase и подписки через RevenueCat.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Август 2024 — февраль 2026</p>
+                            <h3 class="timeline-role">TOO «Rocket Tech»</h3>
+                            <ul class="timeline-list">
+                                <li>Разработал <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=com.smartplaza.app&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Smart Plaza</a> «под ключ» — от
+                                    архитектуры до релиза в Google Play и App Store.</li>
+                                <li>Реализовывал фичи в <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=www.vpluse.kz&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Vpluse</a> и <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=com.rocketfirm.salesteam&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Carlsberg</a> по полному циклу:
+                                    требования → разработка → code review → прод.</li>
+                                <li>Построил сетевой слой на Dio: интерсепторы авторизации, retry-логика, кэширование.
+                                </li>
+                                <li>Внедрил BLoC, что снизило число регрессий и ускорило онбординг команды.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Сентябрь 2023 — август 2024</p>
+                            <h3 class="timeline-role">TOO «Investudy App»</h3>
+                            <ul class="timeline-list">
+                                <li>Запустил <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=com.investudy.investudy&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Investudy</a> с нуля: архитектура,
+                                    команда, релиз в сторах.</li>
+                                <li>Внедрил Clean Architecture — изолированные слои, высокая тестируемость, лёгкое
+                                    масштабирование.</li>
+                                <li>Единолично вёл фичи от планирования до поддержки в проде.</li>
+                                <li>Использовал BLoC/Cubit для предсказуемого data-flow и чистого разделения логики от
+                                    UI.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Август 2022 — сентябрь 2023</p>
+                            <h3 class="timeline-role">TOO «Simple Code»</h3>
+                            <ul class="timeline-list">
+                                <li>Разрабатывал фичи для <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=ip.partners.clevermarket&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Clever Market</a> (маркетплейс) и <a
+                                        class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=kz.bcc.chome&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Center Home</a> (BCC Bank) —
+                                    высоконагруженных продуктов с широкой аудиторией.</li>
+                                <li>Самостоятельно вёл решения от анализа задачи до релиза.</li>
+                                <li>Настроил сетевой слой на Dio с обработкой ошибок и кэшированием запросов.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">Июль 2021 — август 2022</p>
+                            <h3 class="timeline-role">TOO «Listok»</h3>
+                            <ul class="timeline-list">
+                                <li>Разработал <a class="project-link"
+                                        href="https://play.google.com/store/apps/details?id=com.dossanov.listok&amp;hl=ru"
+                                        target="_blank" rel="noopener noreferrer">Listok</a> с нуля — первый
+                                    коммерческий продукт, реализованный полностью самостоятельно.</li>
+                                <li>Заложил Clean Architecture с первого дня — основу для масштабируемой кодовой базы.
+                                </li>
+                                <li>Внедрил BLoC и Dio, сформировав стек для последующих проектов.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title">Ключевые технологии</h2>
                 <div class="skills-grid">
@@ -142,93 +265,6 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Опыт работы</h2>
-                <div class="timeline">
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Июль — август 2026 · Соло-проект</p>
-                            <h3 class="timeline-role"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.bilimge.qyzmet&amp;hl=ru" target="_blank" rel="noopener noreferrer">Білімді қолдау</a></h3>
-                            <ul class="timeline-list">
-                                <li>Благотворительное приложение для сбора пожертвований на поддержку образования и строительство мечетей-медресе.</li>
-                                <li>Разработал в одиночку — от архитектуры до релиза в Google Play.</li>
-                                <li>Интегрировал платёжную систему Tip Top Pay для приёма пожертвований.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Февраль — май 2026 · Соло-проект</p>
-                            <h3 class="timeline-role"><a class="project-link" href="https://apps.apple.com/ru/app/tododay-planner-tracker/id6761600720" target="_blank" rel="noopener noreferrer">TodoDay: Planner &amp; Tracker</a></h3>
-                            <ul class="timeline-list">
-                                <li>Планировщик задач с календарём, заметками, учётом финансов и напоминаниями.</li>
-                                <li>Разработал в одиночку — от архитектуры до релиза в App Store.</li>
-                                <li>Настроил авторизацию через Firebase и подписки через RevenueCat.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Август 2024 — февраль 2026</p>
-                            <h3 class="timeline-role">TOO «Rocket Tech»</h3>
-                            <ul class="timeline-list">
-                                <li>Разработал <a class="project-link" href="https://play.google.com/store/apps/details?id=com.smartplaza.app&amp;hl=ru" target="_blank" rel="noopener noreferrer">Smart Plaza</a> «под ключ» — от архитектуры до релиза в Google Play и App Store.</li>
-                                <li>Реализовывал фичи в <a class="project-link" href="https://play.google.com/store/apps/details?id=www.vpluse.kz&amp;hl=ru" target="_blank" rel="noopener noreferrer">Vpluse</a> и <a class="project-link" href="https://play.google.com/store/apps/details?id=com.rocketfirm.salesteam&amp;hl=ru" target="_blank" rel="noopener noreferrer">Carlsberg</a> по полному циклу: требования → разработка → code review → прод.</li>
-                                <li>Построил сетевой слой на Dio: интерсепторы авторизации, retry-логика, кэширование.</li>
-                                <li>Внедрил BLoC, что снизило число регрессий и ускорило онбординг команды.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Сентябрь 2023 — август 2024</p>
-                            <h3 class="timeline-role">TOO «Investudy App»</h3>
-                            <ul class="timeline-list">
-                                <li>Запустил <a class="project-link" href="https://play.google.com/store/apps/details?id=com.investudy.investudy&amp;hl=ru" target="_blank" rel="noopener noreferrer">Investudy</a> с нуля: архитектура, команда, релиз в сторах.</li>
-                                <li>Внедрил Clean Architecture — изолированные слои, высокая тестируемость, лёгкое масштабирование.</li>
-                                <li>Единолично вёл фичи от планирования до поддержки в проде.</li>
-                                <li>Использовал BLoC/Cubit для предсказуемого data-flow и чистого разделения логики от UI.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Август 2022 — сентябрь 2023</p>
-                            <h3 class="timeline-role">TOO «Simple Code»</h3>
-                            <ul class="timeline-list">
-                                <li>Разрабатывал фичи для <a class="project-link" href="https://play.google.com/store/apps/details?id=ip.partners.clevermarket&amp;hl=ru" target="_blank" rel="noopener noreferrer">Clever Market</a> (маркетплейс) и <a class="project-link" href="https://play.google.com/store/apps/details?id=kz.bcc.chome&amp;hl=ru" target="_blank" rel="noopener noreferrer">Center Home</a> (BCC Bank) — высоконагруженных продуктов с широкой аудиторией.</li>
-                                <li>Самостоятельно вёл решения от анализа задачи до релиза.</li>
-                                <li>Настроил сетевой слой на Dio с обработкой ошибок и кэшированием запросов.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">Июль 2021 — август 2022</p>
-                            <h3 class="timeline-role">TOO «Listok»</h3>
-                            <ul class="timeline-list">
-                                <li>Разработал <a class="project-link" href="https://play.google.com/store/apps/details?id=com.dossanov.listok&amp;hl=ru" target="_blank" rel="noopener noreferrer">Listok</a> с нуля — первый коммерческий продукт, реализованный полностью самостоятельно.</li>
-                                <li>Заложил Clean Architecture с первого дня — основу для масштабируемой кодовой базы.</li>
-                                <li>Внедрил BLoC и Dio, сформировав стек для последующих проектов.</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <section id="contacts" class="section section-alt contacts-section">
             <div class="container">
                 <h2 class="section-title">Контакты</h2>
@@ -254,7 +290,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>Досанов Руслан — Flutter/Dart разработчик</p>
-            <p>&copy; 2026.</p>
+            <p>&copy; 2026</p>
         </div>
     </footer>
 </body>
