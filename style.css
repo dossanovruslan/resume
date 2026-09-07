@@ -631,45 +631,49 @@ main {
 /* ==========================================================================
    Skills
    ========================================================================== */
-.skills-grid {
+.skills-lead {
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+    max-width: 640px;
+    margin-bottom: var(--space-lg);
+}
+
+.skills-rows {
+    border-top: 1px solid var(--color-border-soft);
+}
+
+.skills-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 210px 1fr;
     gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border-soft);
 }
 
-.skill-card {
-    padding: var(--space-md);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.skill-card-icon {
-    width: 32px;
-    height: 32px;
+.skills-row-label {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    background: var(--bg-gradient-card);
-    color: var(--color-accent);
-    font-size: 0.95rem;
-    margin-bottom: var(--space-sm);
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-top: 0.2rem;
 }
 
-.skill-card h3 {
+.skills-row-name {
     font-size: 1rem;
-    margin-bottom: var(--space-sm);
+    font-weight: 600;
     color: var(--color-heading);
+}
+
+.skills-row-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
 }
 
 .tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    align-content: flex-start;
 }
 
 .tag {
@@ -759,9 +763,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    aspect-ratio: 1 / 1;
     margin: 0;
+    overflow: hidden;
     background: var(--bg-gradient-card);
+}
+
+.portfolio-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-thumb-title {
@@ -901,7 +912,6 @@ main {
    Responsive — Tablet (≤1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
-    .skills-grid,
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -939,6 +949,16 @@ main {
         padding: var(--space-md);
     }
 
+    .skills-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: var(--space-sm) 0;
+    }
+
+    .skills-row-label {
+        padding-top: 0;
+    }
+
     .footer-inner {
         flex-direction: column;
         text-align: center;
@@ -958,7 +978,6 @@ main {
         align-items: flex-start;
     }
 
-    .skills-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
     }

@@ -7,6 +7,7 @@
     <title>Досанов Руслан — Flutter Developer</title>
     <meta name="description"
         content="Резюме Досанова Руслана, Flutter/Dart разработчика с 5-летним коммерческим опытом.">
+    <link rel="icon" type="image/png" href="assets/dart-dash.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
@@ -18,7 +19,7 @@
                 var stored = localStorage.getItem('theme');
                 var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
                 document.documentElement.setAttribute('data-theme', theme);
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
 </head>
@@ -27,19 +28,67 @@
     <canvas id="dot-canvas" aria-hidden="true"></canvas>
 
     <svg style="display:none">
-        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
-        <symbol id="icon-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
-        <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-        <symbol id="icon-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
-        <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
-        <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"/><polyline points="22,6 12,13 2,6"/></symbol>
-        <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z"/></symbol>
-        <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-        <symbol id="icon-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
-        <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
-        <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
-        <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
-        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+        </symbol>
+        <symbol id="icon-briefcase" viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+        </symbol>
+        <symbol id="icon-grid" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z" />
+            <polyline points="22,6 12,13 2,6" />
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z" />
+        </symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="icon-external" viewBox="0 0 24 24">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+        </symbol>
+        <symbol id="icon-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </symbol>
+        <symbol id="icon-telegram" viewBox="0 0 24 24">
+            <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </symbol>
     </svg>
 
     <header class="site-header">
@@ -50,34 +99,50 @@
 
             <nav class="site-nav" aria-label="Основная навигация">
                 <a class="nav-link" href="#hero" data-section="hero">
-                    <svg class="icon"><use href="#icon-home"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-home" />
+                    </svg>
                     <span class="nav-link-label">Главная</span>
                 </a>
                 <a class="nav-link" href="#about" data-section="about">
-                    <svg class="icon"><use href="#icon-user"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-user" />
+                    </svg>
                     <span class="nav-link-label">Обо мне</span>
                 </a>
                 <a class="nav-link" href="#experience" data-section="experience">
-                    <svg class="icon"><use href="#icon-briefcase"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-briefcase" />
+                    </svg>
                     <span class="nav-link-label">Опыт</span>
                 </a>
                 <a class="nav-link" href="#skills" data-section="skills">
-                    <svg class="icon"><use href="#icon-code"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-code" />
+                    </svg>
                     <span class="nav-link-label">Технологии</span>
                 </a>
                 <a class="nav-link" href="#portfolio" data-section="portfolio">
-                    <svg class="icon"><use href="#icon-grid"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-grid" />
+                    </svg>
                     <span class="nav-link-label">Портфолио</span>
                 </a>
                 <a class="nav-link" href="#contacts" data-section="contacts">
-                    <svg class="icon"><use href="#icon-mail"/></svg>
+                    <svg class="icon">
+                        <use href="#icon-mail" />
+                    </svg>
                     <span class="nav-link-label">Контакты</span>
                 </a>
             </nav>
 
             <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">
-                <svg class="icon icon-sun"><use href="#icon-sun"/></svg>
-                <svg class="icon icon-moon"><use href="#icon-moon"/></svg>
+                <svg class="icon icon-sun">
+                    <use href="#icon-sun" />
+                </svg>
+                <svg class="icon icon-moon">
+                    <use href="#icon-moon" />
+                </svg>
             </button>
         </div>
     </header>
@@ -86,35 +151,39 @@
         <section id="hero" class="hero section">
             <div class="container">
                 <div class="profile-card card">
-                <div class="profile-main">
-                    <div class="profile-top">
-                        <div class="avatar" aria-hidden="true">
-                            <span class="avatar-initials">РД</span>
+                    <div class="profile-main">
+                        <div class="profile-top">
+                            <div class="avatar" aria-hidden="true">
+                                <span class="avatar-initials">РД</span>
+                            </div>
+                            <div>
+                                <p class="eyebrow">Flutter / Dart разработчик</p>
+                                <h1>Досанов Руслан</h1>
+                            </div>
                         </div>
-                        <div>
-                            <p class="eyebrow">Flutter / Dart разработчик</p>
-                            <h1>Досанов Руслан</h1>
+                        <p class="hero-lead">
+                            5 лет в мобильной разработке: полный цикл от архитектуры до релиза в сторах,
+                            сооснователь продукта с аудиторией 200k+ пользователей.
+                        </p>
+                        <div class="hero-contacts">
+                            <a class="btn btn-primary" href="mailto:dossanovruslan@gmail.com">
+                                <svg class="icon">
+                                    <use href="#icon-mail" />
+                                </svg>
+                                Написать
+                            </a>
+                            <a class="btn btn-secondary" href="tel:+77757777779">
+                                <svg class="icon">
+                                    <use href="#icon-phone" />
+                                </svg>
+                                +7 (775) 777-77-79
+                            </a>
                         </div>
                     </div>
-                    <p class="hero-lead">
-                        5 лет в мобильной разработке: полный цикл от архитектуры до релиза в сторах,
-                        сооснователь продукта с аудиторией 200k+ пользователей.
-                    </p>
-                    <div class="hero-contacts">
-                        <a class="btn btn-primary" href="mailto:dossanovruslan@gmail.com">
-                            <svg class="icon"><use href="#icon-mail"/></svg>
-                            Написать
-                        </a>
-                        <a class="btn btn-secondary" href="tel:+77757777779">
-                            <svg class="icon"><use href="#icon-phone"/></svg>
-                            +7 (775) 777-77-79
-                        </a>
+                    <div class="hero-illustration-wrap">
+                        <span class="hero-illustration-glow" aria-hidden="true"></span>
+                        <img class="hero-illustration" src="assets/dart-dash.png" alt="Dart" width="240" height="246">
                     </div>
-                </div>
-                <div class="hero-illustration-wrap">
-                    <span class="hero-illustration-glow" aria-hidden="true"></span>
-                    <img class="hero-illustration" src="assets/dart-dash.png" alt="Dart" width="240" height="246">
-                </div>
                 </div>
             </div>
         </section>
@@ -122,7 +191,9 @@
         <section id="about" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-icon"><svg class="icon"><use href="#icon-user"/></svg></span>
+                    <span class="section-icon"><svg class="icon">
+                            <use href="#icon-user" />
+                        </svg></span>
                     <h2 class="section-title">Обо мне</h2>
                 </div>
                 <div class="about-card card">
@@ -153,7 +224,9 @@
         <section id="experience" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-icon"><svg class="icon"><use href="#icon-briefcase"/></svg></span>
+                    <span class="section-icon"><svg class="icon">
+                            <use href="#icon-briefcase" />
+                        </svg></span>
                     <h2 class="section-title">Опыт работы</h2>
                 </div>
                 <div class="timeline">
@@ -272,31 +345,96 @@
         <section id="skills" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-icon"><svg class="icon"><use href="#icon-code"/></svg></span>
+                    <span class="section-icon"><svg class="icon">
+                            <use href="#icon-code" />
+                        </svg></span>
                     <h2 class="section-title">Ключевые технологии</h2>
                 </div>
-                <div class="skills-grid">
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-code"/></svg></span>
-                        <h3>Архитектура и паттерны</h3>
+                <p class="skills-lead">Стек, на котором я собираю мобильные продукты: от архитектуры и платежей до
+                    релиза в сторах.</p>
+
+                <div class="skills-rows">
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Flutter и Dart</span>
+                            <span class="skills-row-count">9</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">Flutter</li>
+                            <li class="tag">Dart</li>
+                            <li class="tag">Null safety</li>
+                            <li class="tag">Isolates</li>
+                            <li class="tag">Flutter Web</li>
+                            <li class="tag">Flutter Desktop</li>
+                            <li class="tag">DevTools</li>
+                        </ul>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Архитектура и состояние</span>
+                            <span class="skills-row-count">10</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">Clean Architecture</li>
                             <li class="tag">BLoC</li>
                             <li class="tag">Cubit</li>
+                            <li class="tag">Riverpod</li>
+                            <li class="tag">Provider</li>
+                            <li class="tag">GetIt + Injectable</li>
+                            <li class="tag">Freezed</li>
+                            <li class="tag">SOLID</li>
+                            <li class="tag">Feature-first модули</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-external"/></svg></span>
-                        <h3>Сети и API</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">UI и навигация</span>
+                            <span class="skills-row-count">9</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">go_router</li>
+                            <li class="tag">auto_route</li>
+                            <li class="tag">Адаптивная вёрстка</li>
+                            <li class="tag">CustomPainter</li>
+                            <li class="tag">Rive</li>
+                            <li class="tag">Lottie</li>
+                            <li class="tag">Темизация</li>
+                            <li class="tag">Локализация (intl)</li>
+                        </ul>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Сеть и API</span>
+                            <span class="skills-row-count">9</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">Dio</li>
                             <li class="tag">Интерсепторы</li>
                             <li class="tag">Кэширование</li>
+                            <li class="tag">REST</li>
+                            <li class="tag">GraphQL</li>
+                            <li class="tag">WebSocket</li>
+                            <li class="tag">Offline-first</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-grid"/></svg></span>
-                        <h3>Firebase</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Локальные данные</span>
+                            <span class="skills-row-count">6</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">Hive</li>
+                            <li class="tag">Isar</li>
+                            <li class="tag">Drift</li>
+                            <li class="tag">shared_preferences</li>
+                            <li class="tag">secure_storage</li>
+                        </ul>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Firebase</span>
+                            <span class="skills-row-count">9</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">Auth</li>
                             <li class="tag">Firestore</li>
@@ -304,50 +442,111 @@
                             <li class="tag">Crashlytics</li>
                             <li class="tag">Remote Config</li>
                             <li class="tag">Dynamic Links</li>
+                            <li class="tag">Cloud Messaging</li>
+                            <li class="tag">Cloud Functions</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-grid"/></svg></span>
-                        <h3>Аналитика и маркетинг</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Платежи и подписки</span>
+                            <span class="skills-row-count">8</span>
+                        </div>
                         <ul class="tag-list">
-                            <li class="tag">AppsFlyer</li>
-                            <li class="tag">OneSignal</li>
+                            <li class="tag">Tip Top Pay</li>
+                            <li class="tag">RevenueCat</li>
+                            <li class="tag">in_app_purchase</li>
+                            <li class="tag">Google Pay</li>
+                            <li class="tag">Apple Pay</li>
+                            <li class="tag">Stripe</li>
+                            <li class="tag">3-D Secure</li>
+                            <li class="tag">Рекуррентные платежи</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-user"/></svg></span>
-                        <h3>Авторизация</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Авторизация и безопасность</span>
+                            <span class="skills-row-count">7</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">Google Sign-In</li>
                             <li class="tag">Apple Sign-In</li>
                             <li class="tag">Биометрия</li>
+                            <li class="tag">OAuth 2.0 / JWT</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-briefcase"/></svg></span>
-                        <h3>Платежи и подписки</h3>
-                        <ul class="tag-list">
-                            <li class="tag">Tip Top Pay</li>
-                            <li class="tag">RevenueCat</li>
-                        </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-pin"/></svg></span>
-                        <h3>Карты и геолокация</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Карты и геолокация</span>
+                            <span class="skills-row-count">7</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">2GIS</li>
                             <li class="tag">BLE-маяки</li>
+                            <li class="tag">Google Maps</li>
+                            <li class="tag">geolocator</li>
+                            <li class="tag">Фоновая геолокация</li>
                         </ul>
-                    </article>
-                    <article class="skill-card card">
-                        <span class="skill-card-icon"><svg class="icon"><use href="#icon-code"/></svg></span>
-                        <h3>CI/CD</h3>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Аналитика и рост</span>
+                            <span class="skills-row-count">7</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">AppsFlyer</li>
+                            <li class="tag">OneSignal</li>
+                            <li class="tag">Amplitude</li>
+                            <li class="tag">A/B-тесты</li>
+                            <li class="tag">Push-кампании</li>
+                            <li class="tag">Deep links</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Тестирование и качество</span>
+                            <span class="skills-row-count">8</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">unit-тесты</li>
+                            <li class="tag">widget-тесты</li>
+                            <li class="tag">integration_test</li>
+                            <li class="tag">mocktail</li>
+                            <li class="tag">Покрытие</li>
+                            <li class="tag">Линтеры</li>
+                        </ul>
+                    </div> -->
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">CI/CD и релизы</span>
+                            <span class="skills-row-count">8</span>
+                        </div>
                         <ul class="tag-list">
                             <li class="tag">Fastlane</li>
                             <li class="tag">Codemagic</li>
                             <li class="tag">GitHub Actions</li>
+                            <li class="tag">GitLab CI</li>
+                            <li class="tag">TestFlight</li>
+                            <li class="tag">App Store Connect</li>
+                            <li class="tag">Google Play</li>
+                            <li class="tag">Firebase App Distribution</li>
                         </ul>
-                    </article>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skills-row-label">
+                            <span class="skills-row-name">Инструменты и процесс</span>
+                            <span class="skills-row-count">8</span>
+                        </div>
+                        <ul class="tag-list">
+                            <li class="tag">Git</li>
+                            <li class="tag">GitHub</li>
+                            <li class="tag">Jira</li>
+                            <li class="tag">Figma</li>
+                            <li class="tag">Postman</li>
+                            <li class="tag">Code review</li>
+                            <li class="tag">Менторство</li>
+                            <li class="tag">Scrum</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -355,7 +554,9 @@
         <section id="portfolio" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-icon"><svg class="icon"><use href="#icon-grid"/></svg></span>
+                    <span class="section-icon"><svg class="icon">
+                            <use href="#icon-grid" />
+                        </svg></span>
                     <h2 class="section-title">Портфолио</h2>
                 </div>
                 <div class="portfolio-filters" role="group" aria-label="Фильтр проектов">
@@ -365,11 +566,15 @@
                 </div>
                 <ul class="portfolio-grid">
                     <li class="portfolio-item card" data-category="solo">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=com.bilimge.qyzmet&hl=ru"
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=com.bilimge.qyzmet&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">БҚ</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/bilimge-koldau.png"
+                                    alt="Білімді қолдау" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Соло-проект · Google Play</p>
@@ -378,11 +583,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="solo">
-                        <a class="portfolio-link" href="https://apps.apple.com/ru/app/tododay-planner-tracker/id6761600720"
-                            target="_blank" rel="noopener noreferrer">
+                        <a class="portfolio-link"
+                            href="https://apps.apple.com/ru/app/tododay-planner-tracker/id6761600720" target="_blank"
+                            rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">TD</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/tododay.png" alt="TodoDay"
+                                    loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Соло-проект · App Store</p>
@@ -391,11 +600,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="solo">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=com.investudy.investudy&hl=ru"
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=com.investudy.investudy&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">IS</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/investudy.png"
+                                    alt="Investudy" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Запущен с нуля · Google Play</p>
@@ -403,25 +616,33 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio-item card" data-category="team">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=com.smartplaza.app&hl=ru"
+                    <li class="portfolio-item card" data-category="solo">
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=com.smartplaza.app&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">SP</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/smart-plaza.png"
+                                    alt="Smart Plaza" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
-                                <p class="portfolio-category">Rocket Tech · Google Play / App Store</p>
+                                <p class="portfolio-category">Rocket Tech · Соло-проект</p>
                                 <h3 class="portfolio-item-title">Smart Plaza</h3>
                             </div>
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="team">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=www.vpluse.kz&hl=ru"
-                            target="_blank" rel="noopener noreferrer">
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=www.vpluse.kz&hl=ru" target="_blank"
+                            rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">VP</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/vpluse.png" alt="Vpluse"
+                                    loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Rocket Tech · Google Play</p>
@@ -430,11 +651,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="team">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=com.rocketfirm.salesteam&hl=ru"
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=com.rocketfirm.salesteam&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">CB</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/carlsberg-salesteam.png"
+                                    alt="Carlsberg" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Rocket Tech · Google Play</p>
@@ -443,11 +668,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="team">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=ip.partners.clevermarket&hl=ru"
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=ip.partners.clevermarket&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">CM</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/clever-market.png"
+                                    alt="Clever Market" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Simple Code · Google Play</p>
@@ -456,11 +685,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="team">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=kz.bcc.chome&hl=ru"
-                            target="_blank" rel="noopener noreferrer">
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=kz.bcc.chome&hl=ru" target="_blank"
+                            rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">CH</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/center-home.png"
+                                    alt="Center Home" loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Simple Code · Google Play</p>
@@ -469,11 +702,15 @@
                         </a>
                     </li>
                     <li class="portfolio-item card" data-category="solo">
-                        <a class="portfolio-link" href="https://play.google.com/store/apps/details?id=com.dossanov.listok&hl=ru"
+                        <a class="portfolio-link"
+                            href="https://play.google.com/store/apps/details?id=com.dossanov.listok&hl=ru"
                             target="_blank" rel="noopener noreferrer">
                             <figure class="portfolio-thumb">
-                                <span class="portfolio-thumb-title">LK</span>
-                                <span class="portfolio-open" aria-hidden="true"><svg class="icon"><use href="#icon-external"/></svg></span>
+                                <img class="portfolio-thumb-img" src="assets/projects_images/listok.png" alt="Listok"
+                                    loading="lazy">
+                                <span class="portfolio-open" aria-hidden="true"><svg class="icon">
+                                        <use href="#icon-external" />
+                                    </svg></span>
                             </figure>
                             <div class="portfolio-item-caption">
                                 <p class="portfolio-category">Первый соло-проект · Google Play</p>
@@ -488,44 +725,57 @@
         <section id="contacts" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-icon"><svg class="icon"><use href="#icon-mail"/></svg></span>
+                    <span class="section-icon"><svg class="icon">
+                            <use href="#icon-mail" />
+                        </svg></span>
                     <h2 class="section-title">Контакты</h2>
                 </div>
                 <p class="contacts-lead">Открыт к новым предложениям и сотрудничеству.</p>
                 <ul class="contacts-list">
                     <li class="card">
-                        <span class="contact-icon"><svg class="icon"><use href="#icon-mail"/></svg></span>
+                        <span class="contact-icon"><svg class="icon">
+                                <use href="#icon-mail" />
+                            </svg></span>
                         <span class="contact-text">
                             <span class="contact-label">Email</span>
                             <a href="mailto:dossanovruslan@gmail.com">dossanovruslan@gmail.com</a>
                         </span>
                     </li>
                     <li class="card">
-                        <span class="contact-icon"><svg class="icon"><use href="#icon-phone"/></svg></span>
+                        <span class="contact-icon"><svg class="icon">
+                                <use href="#icon-phone" />
+                            </svg></span>
                         <span class="contact-text">
                             <span class="contact-label">Телефон</span>
                             <a href="tel:+77757777779">+7 (775) 777-77-79</a>
                         </span>
                     </li>
                     <li class="card">
-                        <span class="contact-icon"><svg class="icon"><use href="#icon-pin"/></svg></span>
+                        <span class="contact-icon"><svg class="icon">
+                                <use href="#icon-pin" />
+                            </svg></span>
                         <span class="contact-text">
                             <span class="contact-label">Локация</span>
                             <span class="contact-value">Казахстан, г. Семей</span>
                         </span>
                     </li>
                     <li class="card">
-                        <span class="contact-icon"><svg class="icon icon-brand"><use href="#icon-telegram"/></svg></span>
+                        <span class="contact-icon"><svg class="icon icon-brand">
+                                <use href="#icon-telegram" />
+                            </svg></span>
                         <span class="contact-text">
                             <span class="contact-label">Telegram</span>
                             <a href="https://t.me/rus_dos" target="_blank" rel="noopener noreferrer">@rus_dos</a>
                         </span>
                     </li>
                     <li class="card">
-                        <span class="contact-icon"><svg class="icon icon-brand"><use href="#icon-linkedin"/></svg></span>
+                        <span class="contact-icon"><svg class="icon icon-brand">
+                                <use href="#icon-linkedin" />
+                            </svg></span>
                         <span class="contact-text">
                             <span class="contact-label">LinkedIn</span>
-                            <a href="https://www.linkedin.com/in/ruslan-dossanov-743930248/" target="_blank" rel="noopener noreferrer">ruslan-dossanov</a>
+                            <a href="https://www.linkedin.com/in/ruslan-dossanov-743930248/" target="_blank"
+                                rel="noopener noreferrer">ruslan-dossanov</a>
                         </span>
                     </li>
                 </ul>
