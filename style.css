@@ -593,6 +593,19 @@ main {
     margin-bottom: var(--space-sm);
 }
 
+.timeline-position {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    background: hsla(45, 100%, 72%, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-pill);
+}
+
 .timeline-list {
     display: flex;
     flex-direction: column;
