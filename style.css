@@ -825,6 +825,13 @@ main {
     color: var(--color-heading);
 }
 
+.portfolio-item-desc {
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--color-text-muted);
+}
+
 /* ==========================================================================
    Contacts
    ========================================================================== */
