@@ -928,6 +928,27 @@ main {
     margin: 0;
 }
 
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-pdf-btn {
+    flex-shrink: 0;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer-pdf-btn:disabled {
+    opacity: 0.6;
+    cursor: progress;
+    transform: none;
+}
+
 /* ==========================================================================
    Responsive — Tablet (≤1024px)
    ========================================================================== */
@@ -981,6 +1002,7 @@ main {
 
     .footer-inner {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 }

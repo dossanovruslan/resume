@@ -60,6 +60,115 @@
         });
     });
 
+    /* PDF export */
+    var pdfButton = document.getElementById('pdf-export-btn');
+
+    if (pdfButton) {
+        var pdfLabel = pdfButton.querySelector('.footer-pdf-btn-label');
+        var pdfLabelDefault = pdfLabel ? pdfLabel.textContent : '';
+
+        function waitForImages(container) {
+            var images = Array.prototype.slice.call(container.querySelectorAll('img'));
+            return Promise.all(images.map(function (img) {
+                if (img.loading === 'lazy') img.loading = 'eager';
+                if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+                return new Promise(function (resolve) {
+                    var done = function () { resolve(); };
+                    img.addEventListener('load', done, { once: true });
+                    img.addEventListener('error', done, { once: true });
+                    setTimeout(done, 5000);
+                });
+            }));
+        }
+
+        /* html2canvas can't resolve <use href="#icon-x"> against <symbol> defs
+           reliably, so swap icons to inline paths before capture and restore after. */
+        function inlineIcons(container) {
+            var svgs = Array.prototype.slice.call(container.querySelectorAll('svg.icon'));
+            var restore = [];
+            svgs.forEach(function (svg) {
+                var use = svg.querySelector('use');
+                if (!use) return;
+                var href = use.getAttribute('href') || use.getAttribute('xlink:href');
+                if (!href || href.charAt(0) !== '#') return;
+                var symbol = document.querySelector(href);
+                if (!symbol) return;
+                restore.push({ svg: svg, html: svg.innerHTML, viewBox: svg.getAttribute('viewBox') });
+                svg.innerHTML = symbol.innerHTML;
+                if (symbol.getAttribute('viewBox')) svg.setAttribute('viewBox', symbol.getAttribute('viewBox'));
+            });
+            return restore;
+        }
+
+        function restoreIcons(restore) {
+            restore.forEach(function (item) {
+                item.svg.innerHTML = item.html;
+                if (item.viewBox) item.svg.setAttribute('viewBox', item.viewBox);
+            });
+        }
+
+        pdfButton.addEventListener('click', function () {
+            if (pdfButton.disabled) return;
+            if (typeof html2canvas === 'undefined' || !window.jspdf) {
+                window.print();
+                return;
+            }
+
+            var target = document.querySelector('main');
+            if (!target) return;
+
+            pdfButton.disabled = true;
+            if (pdfLabel) pdfLabel.textContent = 'Формирую PDF…';
+
+            var iconRestore = [];
+
+            waitForImages(target)
+                .then(function () {
+                    iconRestore = inlineIcons(target);
+                    var bg = getComputedStyle(document.body).backgroundColor;
+                    return html2canvas(target, {
+                        scale: Math.min(window.devicePixelRatio || 1, 2),
+                        useCORS: true,
+                        backgroundColor: bg
+                    });
+                })
+                .then(function (canvas) {
+                    restoreIcons(iconRestore);
+                    var jsPDF = window.jspdf.jsPDF;
+                    var pdf = new jsPDF('p', 'pt', 'a4');
+                    var pdfWidth = pdf.internal.pageSize.getWidth();
+                    var pdfHeight = pdf.internal.pageSize.getHeight();
+                    var imgWidth = pdfWidth;
+                    var imgHeight = (canvas.height * imgWidth) / canvas.width;
+                    var imgData = canvas.toDataURL('image/jpeg', 0.92);
+
+                    var heightLeft = imgHeight;
+                    var position = 0;
+
+                    pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+
+                    while (heightLeft > 0) {
+                        position = heightLeft - imgHeight;
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+                        heightLeft -= pdfHeight;
+                    }
+
+                    pdf.save('Dosanov_Ruslan_Resume.pdf');
+                })
+                .catch(function (err) {
+                    restoreIcons(iconRestore);
+                    console.error('PDF export failed', err);
+                    window.print();
+                })
+                .finally(function () {
+                    pdfButton.disabled = false;
+                    if (pdfLabel) pdfLabel.textContent = pdfLabelDefault;
+                });
+        });
+    }
+
     /* Interactive dot-grid background with mouse trail */
     var canvas = document.getElementById('dot-canvas');
     if (canvas && canvas.getContext) {
